@@ -34,6 +34,7 @@ export function app(): express.Express {
         .replace(/'/g, "&#039;");
     };
 
+    // Below is the URL route for the Angular welcome mail component
     request(`http://127.0.0.1:4200/welcome-email/${req.params.username}`, (error, response, body) => {
 
       // TODO : Send email to the user from WelcomeEmailComponentComponent.ts component as `body`
